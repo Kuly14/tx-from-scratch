@@ -1,0 +1,17 @@
+[package]
+name = "tx-from-scratch"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rlp = "0.5.2"
+sha3 = "0.10.6"
+secp256k1 = { version = "0.25.0", features = ["default", "recovery"] }
+jsonrpsee = { version = "0.16.1", features = ["full"] }
+serde = { version = "1.0.126", features = ["derive"] }
+serde_json = "1.0.64"
+ethereum-types = "0.14.1"
+web3 = { version = "0.18.0", features = ["bytes"] }
+tokio = { version = "1", features = ["full"] }
