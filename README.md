@@ -4,53 +4,54 @@ To use this crate first crate Transaction struct
 
 ```rust
 let tx = Transaction {
-	// Nonce of the transaction
-	nonce: 225,
+    // Nonce of the transaction
+    nonce: 225,
 
-	// To Address
-	to: Some(
-	    H160::from_str(&"70997970C51812dc3A010C7d01b50e0d17dc79C6")
-		.unwrap()
-		.to_fixed_bytes(),
-	),
+    // To Address
+    to: Some(
+	H160::from_str(&"70997970C51812dc3A010C7d01b50e0d17dc79C6")
+	    .unwrap()
+	    .to_fixed_bytes(),
+    ),
 
-	// Value
-	value: 10000000000,
+    // Value
+    value: 10000000000,
 
-	// Chain ID
-	chain_id: 988242,
+    // Chain ID
+    chain_id: 988242,
 
-	// Rest is default
-	..Default::default()
+    // Rest is default
+    ..Default::default()
 };
 ```
 
 You can also specify data if you want to call or deploy a smart contract:
 
 ```rust
-let data = vec![0, 0, 0, 0];
+    let data = vec![0, 0, 0, 0];
 
-let tx = Transaction {
-// Nonce of the transaction
-nonce: 225,
+    let tx = Transaction {
+    // Nonce of the transaction
+    nonce: 225,
 
-// To Address
-to: Some(
-    H160::from_str(&"70997970C51812dc3A010C7d01b50e0d17dc79C6")
-	.unwrap()
-	.to_fixed_bytes(),
-),
+    // To Address
+    to: Some(
+	H160::from_str(&"70997970C51812dc3A010C7d01b50e0d17dc79C6")
+	    .unwrap()
+	    .to_fixed_bytes(),
+    ),
 
-// Value
-value: 10000000000,
+    // Value
+    value: 10000000000,
 
-// Chain ID
-chain_id: 988242,
+    // Chain ID
+    chain_id: 988242,
 
-data,
+    data,
 
-// Rest is default
-..Default::default()
+    // Rest is default
+    ..Default::default()
+}
 ```
 
 
