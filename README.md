@@ -1,6 +1,6 @@
 # Ethereum Transaction From Scratch In Rust
 
-To use this crate first crate Transaction struct 
+To use this crate first create Transaction struct 
 
 ```rust
 use ethereum_types::H160; 
