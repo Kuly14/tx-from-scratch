@@ -2,6 +2,11 @@
 name = "tx-from-scratch"
 version = "0.1.0"
 edition = "2021"
+authors = ["David Kulman kulman.david@gmail.com"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/Kuly14/eth-tx-from-scratch"
+description = "Library that allows you to create and sign ethereum legacy transactions from scratch" 
 
 [dependencies]
 rlp = "0.5.2"
