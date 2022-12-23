@@ -1,5 +1,7 @@
 # Ethereum Transaction From Scratch In Rust
 
+Documentation can be found [here](https://docs.rs/tx-from-scratch/latest/tx_from_scratch/)
+
 To use this crate first create Transaction struct 
 
 ```rust
