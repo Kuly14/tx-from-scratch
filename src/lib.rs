@@ -54,7 +54,7 @@ impl Transaction {
 
         let sign_only = Secp256k1::signing_only();
         let message = Message::from_slice(&hashed_tx).unwrap();
-        let secret_key = SecretKey::from_slice(&private_key).expect("Wrong Private Key");
+        let secret_key = SecretKey::from_slice(private_key).expect("Wrong Private Key");
         let (v, signature) = sign_only
             .sign_ecdsa_recoverable(&message, &secret_key)
             .serialize_compact();
@@ -100,7 +100,7 @@ impl Encodable for Transaction {
         s.append(&self.nonce);
         s.append(&self.gas_price);
         s.append(&self.gas);
-        if let None = self.to {
+        if self.to.is_none() {
             s.append(&Vec::new());
         } else {
             s.append(&self.to.unwrap().to_vec());
