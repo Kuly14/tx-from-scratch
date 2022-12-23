@@ -85,7 +85,7 @@ let tx_bytes = Bytes::from(tx_bytes);
 let signed_tx = serde_json::to_value(tx_bytes).unwrap();
 ```
 
-And thats it.
+You can find detailed example in [examples](https://github.com/Kuly14/eth-tx-from-scratch/tree/main/examples)
 
 ## Disclaimer
 
