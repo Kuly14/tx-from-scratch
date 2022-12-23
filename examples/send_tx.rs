@@ -54,6 +54,6 @@ async fn main() {
     let params = rpc_params![signed_tx];
     let response: Result<String, _> = client.request("eth_sendRawTransaction", params).await;
 
-    // Print the result 
+    // Print the result
     println!("TX: {:#?}", response);
 }

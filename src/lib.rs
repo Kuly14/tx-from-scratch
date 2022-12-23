@@ -4,7 +4,7 @@ use sha3::{Digest, Keccak256};
 
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct Transaction {
-    /// Nonce of your next transaction 
+    /// Nonce of your next transaction
     pub nonce: u128,
 
     /// Gas price
@@ -128,7 +128,7 @@ impl Default for Transaction {
     /// ```
     /// If you don't specify `to` the default is None so it will try to deploy a contract
     ///
-    /// Default is: 
+    /// Default is:
     /// ```no_run
     /// Transaction {
     ///     nonce: 0,
