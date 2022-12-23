@@ -87,6 +87,12 @@ let signed_tx = serde_json::to_value(tx_bytes).unwrap();
 
 You can find detailed example in [examples](https://github.com/Kuly14/eth-tx-from-scratch/tree/main/examples)
 
+## Acknowledgments
+
+Credit goes to [synlestidae](https://github.com/synlestidae) creator of [ethereum-tx-sign](https://github.com/synlestidae/ethereum-tx-sign). His crate helped me to understand how are ethereum transactions encoded and signed.
+
+This crate is just simpler implementation of [ethereum-tx-sign](https://github.com/synlestidae/ethereum-tx-sign).
+
 ## Disclaimer
 
 **This is untested, unaudited software don't use in production or with real crypto!!!**
