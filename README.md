@@ -3,6 +3,8 @@
 To use this crate first crate Transaction struct 
 
 ```rust
+use ethereum_types::H160; 
+
 let tx = Transaction {
     // Nonce of the transaction
     nonce: 225,
