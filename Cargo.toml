@@ -6,6 +6,7 @@ authors = ["David Kulman kulman.david@gmail.com"]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/Kuly14/eth-tx-from-scratch"
+documentation = "https://docs.rs/tx-from-scratch/latest/tx_from_scratch/"
 description = "Library that allows you to create and sign ethereum legacy transactions from scratch" 
 
 keywords = ["ethereum", "transaction", "crypto"]
