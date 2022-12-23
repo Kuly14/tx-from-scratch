@@ -28,9 +28,11 @@ let tx = Transaction {
 You can also specify data if you want to call or deploy a smart contract:
 
 ```rust
-    let data = vec![0, 0, 0, 0];
+use ethereum_types::H160; 
 
-    let tx = Transaction {
+let data = vec![0, 0, 0, 0];
+
+let tx = Transaction {
     // Nonce of the transaction
     nonce: 225,
 
@@ -55,9 +57,11 @@ You can also specify data if you want to call or deploy a smart contract:
 ```
 
 
-After creating the stuct you can just call the `sign` method with your private key:
+After creating the struct you can just call the `sign` method with your private key:
 
 ```rust
+use ethereum_types::H256; 
+
 // Add your private key
 // This is a know private key from hardhat test accounts
 let private_key =
@@ -70,6 +74,8 @@ let tx_bytes = tx.sign(private_key.as_bytes());
 If you want to send your signed transaction you will need to crate a json object from the signed bytes:
 
 ```rust
+use web3::types::Bytes;
+
 // Convert Vec<u8> to Bytes so it can be serialized
 let tx_bytes = Bytes::from(tx_bytes);
 
@@ -82,7 +88,4 @@ And thats it.
 ## Disclaimer
 
 **This is untested, unaudited software don't use in production or with real crypto!!!**
-
-
-
 
