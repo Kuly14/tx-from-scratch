@@ -93,7 +93,7 @@ You can find detailed example in [examples](https://github.com/Kuly14/eth-tx-fro
 
 Credit goes to [synlestidae](https://github.com/synlestidae) creator of [ethereum-tx-sign](https://github.com/synlestidae/ethereum-tx-sign). His crate helped me to understand how are ethereum transactions encoded and signed.
 
-This crate is just simpler implementation of [ethereum-tx-sign](https://github.com/synlestidae/ethereum-tx-sign).
+This crate is just simpler implementation of [ethereum-tx-sign](https://github.com/synlestidae/ethereum-tx-sign). And it only supports Legacy Transactions.
 
 ## Disclaimer
 
