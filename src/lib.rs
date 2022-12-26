@@ -73,6 +73,8 @@ impl Transaction {
         stream.out().to_vec()
     }
 
+    /// This method first RLP encodes the transaction and then hashes it with keccak256.
+    /// It will return a hashed transaction that has to be signed
     pub fn hash(&self) -> Vec<u8> {
         // Rlp encode transaction
         let mut stream = RlpStream::new();
