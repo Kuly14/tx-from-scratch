@@ -1,6 +1,5 @@
-use ethereum_types::H256;
 use std::str::FromStr;
-use web3::types::Bytes;
+use ethereum_types::H256;
 
 use jsonrpsee::core::client::ClientT;
 use jsonrpsee::http_client::HttpClientBuilder;
@@ -31,21 +30,21 @@ pub async fn main() {
     let private_key =
         H256::from_str("ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80").unwrap();
 
-    // Sign the transaction
     let tx_bytes = tx.sign(private_key.as_bytes());
 
-    // Convert Vec<u8> to Bytes so it can be serialized
-    let tx_bytes = Bytes::from(tx_bytes);
+    // Convert Vec<u8> to String so it can be serialized
+    let mut tx_bytes = hex::encode(tx_bytes);
+    // Insert 0x to the front of the String
+    tx_bytes.insert_str(0, "0x");
 
     // Convert it to JSON value
     let signed_tx = serde_json::to_value(tx_bytes).unwrap();
-    println!("{:#?}", signed_tx);
 
     // Start a Json RPC client
     let url = String::from("http://10.5.0.2:8545/");
     let client = HttpClientBuilder::default().build(url).unwrap();
 
-    // Call the node with the signed signature
+    // Call the node with the signed transaction
     let params = rpc_params![signed_tx];
     let response: Result<String, _> = client.request("eth_sendRawTransaction", params).await;
 
