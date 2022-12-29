@@ -1,7 +1,5 @@
-#![allow(unused_imports)]
-use ethereum_types::{H160, H256};
-use serde::{Deserialize, Serialize};
-use std::{fmt::Write, num::ParseIntError, str::FromStr};
+use ethereum_types::H256;
+use std::str::FromStr;
 use web3::types::Bytes;
 
 use jsonrpsee::core::client::ClientT;
