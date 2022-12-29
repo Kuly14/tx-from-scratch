@@ -16,7 +16,7 @@ async fn main() {
 
         // To Address
         to: Some(
-            H160::from_str(&"70997970C51812dc3A010C7d01b50e0d17dc79C6")
+            H160::from_str("70997970C51812dc3A010C7d01b50e0d17dc79C6")
                 .unwrap()
                 .to_fixed_bytes(),
         ),
